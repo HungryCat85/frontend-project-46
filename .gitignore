@@ -1,7 +1,6 @@
 node_modules
-.vscode
-.eslintrc.yml
 jsconfig.json
-eslint.config.js
-bak
 *.cast
+.npmrc
+trash.js
+coverage
