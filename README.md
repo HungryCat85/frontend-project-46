@@ -1,5 +1,4 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/HungryCat85/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/HungryCat85/frontend-project-46/actions)
 [![hexlet-check](https://github.com/HungryCat85/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/HungryCat85/frontend-project-46/actions/workflows/hexlet-check.yml)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=HungryCat85_frontend-project-46)](https://sonarcloud.io/summary/new_code?id=HungryCat85_frontend-project-46)
 
