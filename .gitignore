@@ -2,4 +2,3 @@ node_modules
 jsconfig.json
 *.cast
 trash.js
-coverage
