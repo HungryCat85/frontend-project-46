@@ -1,5 +1,5 @@
 
-import myParse from './parsing.js';
+import myParse from './parsers.js';
 
 const compareFiles = (f1, f2) => {
   const file1 = myParse(f1);  // парсим файлы
@@ -32,8 +32,7 @@ const compareFiles = (f1, f2) => {
     .sort(([key1, ...value1], [key2, ...value2]) => key1.localeCompare(key2))
     .map(([key, value, res]) => `${res}${key}: ${value}`)
     .join('\n ');
-  // console.log(file1);
-  // console.log(file2);
+
   return `{\n ${result}\n}`;
 };
 
