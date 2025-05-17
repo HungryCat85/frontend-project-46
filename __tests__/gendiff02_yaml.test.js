@@ -1,4 +1,5 @@
 import compareFiles from '../bin/compare.js';
+import * as formaters from '../bin/formaters.js'
 import { fileURLToPath } from 'url'
 import fs from 'fs';
 import path from 'path';
@@ -18,22 +19,30 @@ test('yaml01', () => {
   const file1 = myDirname('file01.yaml');
   const file2 = myDirname('file02.yml');
   const expected01 = fs.readFileSync(myDirname('result01.txt'), 'utf-8');
-
-  expect(compareFiles(file1, file2)).toEqual(expected01);
+  const diff = compareFiles((file1), (file2));
+  expect(formaters.stylish(diff)).toEqual(expected01);
 });
 
 test('yaml02', () => {
   const file1 = myDirname('file01.yaml');
   const file2 = myDirname('file03.yaml');
   const expected01 = fs.readFileSync(myDirname('result02.txt'), 'utf-8');
-
-  expect(compareFiles(file1, file2)).toEqual(expected01);
+  const diff = compareFiles((file1), (file2));
+  expect(formaters.stylish(diff)).toEqual(expected01);
 });
 
 test('yaml03', () => {
   const file1 = myDirname('file03.yaml');
   const file2 = myDirname('file01.yaml');
   const expected01 = fs.readFileSync(myDirname('result03.txt'), 'utf-8');
+  const diff = compareFiles((file1), (file2));
+  expect(formaters.stylish(diff)).toEqual(expected01);
+});
 
-  expect(compareFiles(file1, file2)).toEqual(expected01);
+test('yaml04', () => {
+  const file1 = myDirname('file11.yml');
+  const file2 = myDirname('file12.yaml');
+  const expected01 = fs.readFileSync(myDirname('result11.txt'), 'utf-8');
+  const diff = compareFiles((file1), (file2));
+  expect(formaters.stylish(diff)).toEqual(expected01);
 });
