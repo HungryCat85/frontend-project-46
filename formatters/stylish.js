@@ -1,5 +1,3 @@
-import fs from'fs';
-
 const stylish = (value, replacer = ' ') => {
   const spacesCount = 4;
   const iter = (currentValue, depth) => {
@@ -31,15 +29,7 @@ const stylish = (value, replacer = ' ') => {
   };
   
   const result = String(iter(value, 1));
-/*
-  const fileName = './__fixtures__/myResult.txt';
-  fs.writeFile(fileName, result, (err) => {
-    // если произошла ошибка, выбрасываем исключение
-    if (err) throw err;
-    // выводим сообщение об успешной записи
-    console.log('Данные сохранены в файл');
-  });
-  */
+
   return result;
 };
 
