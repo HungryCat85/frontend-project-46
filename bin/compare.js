@@ -42,7 +42,7 @@ const compareFiles = (file1, file2) => {
             if (_.isEqual(value1, value2)) {  // если узлы - одинаковые объекты, копируем весь узел
               acc.push( [key1, toAr(value1), 0]);
             } else {                          
-              acc.push( [key1, findDif(value1, value2), 0]); // если узлы - разные объекты, углубляемся в узел
+              acc.push( [key1, findDif(value1, value2)]); // если узлы - разные объекты, углубляемся в узел //ВНИМАНИЕ
             } 
           } else if (value1 === value2) acc.push([key1, value1, 0]) // одинаковые ключи и значения
             else {  // если ключи одинаковые, а значения разные.

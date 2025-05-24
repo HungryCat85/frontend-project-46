@@ -61,3 +61,19 @@ test('json_plain01', () => {
   const diff = genDiff(file1, file2, 'plain')
   expect(diff).toEqual(expected01);
 });
+
+test('json_json01', () => {
+  const file1 = myDirname('file11.json');
+  const file2 = myDirname('file12.json');
+  const expected01 = fs.readFileSync(myDirname('result_json01.txt'), 'utf-8');
+  const diff = genDiff(file1, file2, 'json')
+  expect(diff).toEqual(expected01);
+});
+
+test('json_json01', () => {
+  const file1 = myDirname('file12.json');
+  const file2 = myDirname('file11.json');
+  const expected01 = fs.readFileSync(myDirname('result_json02.txt'), 'utf-8');
+  const diff = genDiff(file1, file2, 'json')
+  expect(diff).toEqual(expected01);
+});
