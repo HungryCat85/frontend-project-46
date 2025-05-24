@@ -1,6 +1,6 @@
-import { stylish } from './stylish.js'
-import { plain } from './plane.js'
-import { jsonF } from './json.js';
+import stylish from './stylish.js';
+import plain from './plane.js';
+import jsonF from './json.js';
 
 const formatdata = (data, format = 'stylish') => {
   // let result;
@@ -12,4 +12,4 @@ const formatdata = (data, format = 'stylish') => {
   }
 };
 
-export {formatdata};
+export default formatdata;
