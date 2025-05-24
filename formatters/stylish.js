@@ -17,7 +17,8 @@ const stylish = (value, replacer = ' ') => {
         default: 
           pr = '  ';
       }
-      const result = (val !== '') ? `${currentIndent}${pr}${key}: ` : `${currentIndent}${pr}${key}:`;
+      // const result = (val !== '') ? `${currentIndent}${pr}${key}: ` : `${currentIndent}${pr}${key}: `;
+      const result = `${currentIndent}${pr}${key}: `;
       return Array.isArray(val) ? `${result}${iter(val, depth + 1)}` : `${result}${val}`;
     });
   

@@ -1,4 +1,4 @@
-import genDiff from '../src/files/index.js';
+import genDiff from '../src/index.js';
 import { fileURLToPath } from 'url'
 import fs from 'fs';
 import path from 'path';
@@ -70,7 +70,7 @@ test('json_json01', () => {
   expect(diff).toEqual(expected01);
 });
 
-test('json_json01', () => {
+test('json_json02', () => {
   const file1 = myDirname('file12.json');
   const file2 = myDirname('file11.json');
   const expected01 = fs.readFileSync(myDirname('result_json02.txt'), 'utf-8');
