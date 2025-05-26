@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { program } from 'commander';
-import genDiff from '../src/index.js';
+import { program } from 'commander'
+import genDiff from '../src/index.js'
 
 const diff = () => {
   program
@@ -12,14 +12,14 @@ const diff = () => {
     .argument('<file1>', 'first file')
     .argument('<file2>', 'second file')
     .action((file1, file2) => {
-      const options = program.opts();
-      const result = genDiff(file1, file2, options.format);
-      console.log(result);
-    });
+      const options = program.opts()
+      const result = genDiff(file1, file2, options.format)
+      console.log(result)
+    })
 
-  program.parse();
-};
+  program.parse()
+}
 
-diff();
+diff()
 
-export default diff;
+export default diff

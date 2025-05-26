@@ -1,35 +1,35 @@
 const stylish = (value, replacer = ' ') => {
-  const spacesCount = 4;
+  const spacesCount = 4
   const iter = (currentValue, depth) => {
-    const indentSize = depth * spacesCount;
-    const currentIndent = replacer.repeat(indentSize - 2);
-    const bracketIndent = replacer.repeat(indentSize - spacesCount);
+    const indentSize = depth * spacesCount
+    const currentIndent = replacer.repeat(indentSize - 2)
+    const bracketIndent = replacer.repeat(indentSize - spacesCount)
     const lines = currentValue.map(([key, val, ch]) => {
-      let pr;
+      let pr
       switch (ch) {
         case '+':
-          pr = '+ ';
-          break;
+          pr = '+ '
+          break
         case '-':
-          pr = '- ';
-          break;
+          pr = '- '
+          break
         default:
-          pr = '  ';
+          pr = '  '
       }
 
-      const result = `${currentIndent}${pr}${key}: `;
-      return Array.isArray(val) ? `${result}${iter(val, depth + 1)}` : `${result}${val}`;
-    });
+      const result = `${currentIndent}${pr}${key}: `
+      return Array.isArray(val) ? `${result}${iter(val, depth + 1)}` : `${result}${val}`
+    })
 
     return [
       '{',
       ...lines,
       `${bracketIndent}}`,
-    ].join('\n');
-  };
+    ].join('\n')
+  }
 
-  const result = String(iter(value, 1));
-  return result;
-};
+  const result = String(iter(value, 1))
+  return result
+}
 
-export default stylish;
+export default stylish
