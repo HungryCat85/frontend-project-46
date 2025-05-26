@@ -29,7 +29,6 @@ const stylish = (value, replacer = ' ') => {
   };
 
   const result = String(iter(value, 1));
-
   return result;
 };
 
